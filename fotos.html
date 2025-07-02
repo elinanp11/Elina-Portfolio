@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carpeta de Fotos - Hello Kitty</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe4ec 0%, #ffd6f6 100%);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background: #ffb3d9;
+      color: #fff;
+      padding: 20px 0 12px 0;
+      text-align: center;
+      box-shadow: 0 2px 12px #ffd6f6;
+      width: 100vw;
+    }
+    .header-title {
+      font-size: 2.1rem;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 1px 2px 8px #ffd6f6;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 32px 0 24px 0;
+      width: 100vw;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 18px;
+      min-height: 60px;
+      max-width: 700px;
+    }
+    .photo {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #ffd6f6;
+      overflow: hidden;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: popin 0.7s;
+      transition: transform 0.2s;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      transition: transform 0.3s;
+    }
+    .photo:hover img {
+      transform: scale(1.08) rotate(-2deg);
+    }
+    @keyframes popin {
+      from { opacity: 0; transform: scale(0.7); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .back-btn {
+      background: #ffb3d9;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px #ffd6f6;
+      border: none;
+      display: inline-block;
+      margin-top: 24px;
+    }
+    .back-btn:hover {
+      background: #ff69b4;
+    }
+    footer {
+      background: #fff0f6;
+      color: #b197fc;
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      border-top: 2px solid #ffd6f6;
+      margin-top: auto;
+      width: 100vw;
+    }
+    .footer-heart {
+      color: #ff69b4;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">Carpeta de Fotos</div>
+  </header>
+  <main>
+    <button class="back-btn" onclick="window.location.href='hol.html'">Volver a la galería</button>
+    <div class="gallery" id="gallery"></div>
+  </main>
+  <footer>
+    Hecho con <span class="footer-heart">♥</span> por Elina
+  </footer>
+  <script>
+    const gallery = document.getElementById('gallery');
+    function loadPhotos() {
+      gallery.innerHTML = '';
+      const photos = JSON.parse(localStorage.getItem('kittyPhotos') || '[]');
+      if (photos.length === 0) {
+        gallery.innerHTML = '<p style="color:#d63384;font-size:1.1rem;">No hay fotos guardadas aún.</p>';
+        return;
+      }
+      photos.forEach(src => {
+        const div = document.createElement('div');
+        div.className = 'photo';
+        const img = document.createElement('img');
+        img.src = src;
+        div.appendChild(img);
+        gallery.appendChild(div);
+      });
+    }
+    loadPhotos();
+  </script>
+</body>
+</html> 

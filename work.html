@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajo | Elina Pérez</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <img id="profile-pic" class="profile-pic" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de perfil">
+      <button id="profile-pic-btn" class="profile-pic-btn">Cambiar foto</button>
+      <h1>Elina Pérez</h1>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="hol.html">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="work.html" class="active">Trabajo</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="folder.html">Mi Folder</a></li>
+      </ul>
+    </nav>
+    <button id="mode-toggle" class="mode-toggle">🌙/☀️</button>
+  </header>
+  <section class="work-section">
+    <h2>Trabajo (Mini Juego Pou)</h2>
+    <div id="pou-game">
+      <div class="pou-face">
+        <div style="display:flex;justify-content:center;align-items:center;gap:10px;margin-top:18px;">
+          <span class="pou-eye"></span>
+          <span class="pou-eye"></span>
+        </div>
+        <div class="pou-mouth"></div>
+      </div>
+    </div>
+    <div class="pou-btns">
+      <button class="pou-btn" id="feed-btn">🍔 Alimentar</button>
+      <button class="pou-btn" id="play-btn">🎲 Jugar</button>
+    </div>
+    <div style="margin-top:18px;">
+      <label>Hambre <progress id="pou-hunger" value="50" max="100"></progress></label>
+      <label style="margin-left:18px;">Diversión <progress id="pou-fun" value="50" max="100"></progress></label>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <p>Hecho con <span class="footer-heart">♥</span> por Elina Pérez | Centro Supérate, Alberto Motta</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

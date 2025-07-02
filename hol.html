@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elina Pérez | Portafolio Personal</title>
+  <!-- Vincula tu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <img id="profile-pic" class="profile-pic" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de perfil">
+      <button id="profile-pic-btn" class="profile-pic-btn">Cambiar foto</button>
+      <h1>Elina Pérez</h1>
+      <p class="subtitle">Estudiante del Centro Supérate, Alberto Motta - San Miguelito</p>
+      <p class="techs">HTML • CSS • JavaScript • Bootstrap</p>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="hol.html" class="active">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="work.html">Trabajo</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="folder.html">Mi Folder</a></li>
+      </ul>
+    </nav>
+    <button id="mode-toggle" class="mode-toggle">🌙/☀️</button>
+  </header>
+
+  <!-- Sección de bienvenida creativa -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <h2>¡Bienvenido a mi portafolio creativo!</h2>
+      <p>Descubre mi mundo digital, mis proyectos y mi pasión por la tecnología.</p>
+      <a class="cta-btn" href="projects.html">Ver Proyectos</a>
+    </div>
+    <div class="hero-art" id="hero-art"></div>
+  </section>
+
+  <!-- Sección sobre mí -->
+  <section id="sobre-mi" class="about-section">
+    <h2>Sobre mí</h2>
+    <p>Soy Elina Pérez, estudiante entusiasta de tecnologías web. Me encanta aprender, crear y compartir soluciones digitales. Mi meta es crecer como desarrolladora y aportar creatividad a cada proyecto.</p>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Bootstrap</li>
+      <li>Trabajo en equipo</li>
+      <li>Resolución de problemas</li>
+    </ul>
+  </section>
+
+  <!-- Sección de proyectos destacados -->
+  <section id="proyectos" class="projects-section">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+      <!-- Ejemplo de proyecto, puedes duplicar este bloque para más proyectos -->
+      <div class="project-card">
+        <div class="project-img"></div>
+        <div class="project-info">
+          <h3>Mi Blog Personal</h3>
+          <p>Blog donde comparto artículos sobre desarrollo web y tecnología.</p>
+          <a href="#" class="project-link">Ver más</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img"></div>
+        <div class="project-info">
+          <h3>Galería Creativa</h3>
+          <p>Una galería interactiva para mostrar mis fotos y diseños favoritos.</p>
+          <a href="#" class="project-link">Ver más</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img"></div>
+        <div class="project-info">
+          <h3>Tienda Online</h3>
+          <p>Un e-commerce moderno con carrito de compras y pagos integrados.</p>
+          <a href="#" class="project-link">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de contactos globales -->
+  <section id="contacto" class="contact-section">
+    <h2>Contacto Global</h2>
+    <p>¿Quieres trabajar conmigo o tienes alguna pregunta? ¡Contáctame!</p>
+    <div class="contact-links">
+      <a href="mailto:elina.perez@email.com" class="contact-link">Email</a>
+      <a href="https://www.linkedin.com/" class="contact-link" target="_blank">LinkedIn</a>
+      <a href="https://github.com/" class="contact-link" target="_blank">GitHub</a>
+      <a href="https://wa.me/50760000000" class="contact-link" target="_blank">WhatsApp</a>
+      <a href="https://twitter.com/" class="contact-link" target="_blank">Twitter</a>
+    </div>
+  </section>
+
+  <!-- Folder creativo -->
+  <section id="folder" class="folder-section">
+    <h2>Mi Folder Creativo</h2>
+    <div class="folder-gallery" id="folder-gallery">
+      <!-- Aquí se mostrarán archivos o imágenes creativas con JS -->
+    </div>
+    <button class="add-file-btn" onclick="addCreativeFile()">Agregar archivo creativo</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>Hecho con <span class="footer-heart">♥</span> por Elina Pérez | Centro Supérate, Alberto Motta</p>
+  </footer>
+
+  <!-- Vincula tu JS personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
