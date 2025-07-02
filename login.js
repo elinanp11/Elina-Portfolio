@@ -8,7 +8,6 @@ const firebaseConfig = {
     appId: "1:646388078931:web:5aca4f1566effa92fee9a6",
     measurementId: "G-ZBWJ2TQ588"
   };
-  
 
 // Inicializar Firebase
 firebase.initializeApp(firebaseConfig);
@@ -33,6 +32,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         // Redirigir al usuario a la página principal
         window.location.href = 'index.html';
     } catch (error) {
+        console.error('Error:', error);
         alert('Error al iniciar sesión: ' + error.message);
     }
 });
